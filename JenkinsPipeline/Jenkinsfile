@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage('Fetch code') {
+      steps {
+         git branch: 'product-service', url: 'https://github.com/josealonso/ProductService.git'
+      }
+    }
+    stage('Build') {
+      steps {
+         sh 'mvn install'
+      }
+    }
+    stage('Test') {
+      steps {
+         sh 'mvn test'
+      }
+    }
+  }
+}
+
+
