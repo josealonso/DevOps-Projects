@@ -1,0 +1,10 @@
+# Kubernetes manifest to run nginx on a pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:alpine
+
