@@ -53,8 +53,23 @@ This deployment is automatic if continuous deployment is configured.
 
 #### Problem
 
-Operational overhead to maintain servers: Jenkins, Nexus, Sonar, Git.
+Operational overhead to maintain servers: Jenkins, Nexus, Sonar, database.
 
+### Cloud Services for CI
+
+CI Pipeline on AWS. Services used:
+
+- Code Commit as the Version Control System on AWS.
+
+- Code Artifact as the Maven repository for dependencies.
+
+- Code Build as the Build Service.
+
+- Code Deploy.
+
+- CodePipeline to integrate all jobs together.
+
+The artifact is deployed to a S3 bucket.
 
 
 
