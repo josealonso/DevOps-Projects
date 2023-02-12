@@ -9,9 +9,17 @@ app.get('/', (req, res) => res.json([
 
         name: 'John Doe',
         email: 'johndoe@gmail.com'
+    },
+    {
+        name: 'Alice Doe',
+        email: 'alicedoe@gmail.com'
+    },
+    {
+        name: 'Bob Doe',
+        email: 'bobdoe@gmail.com'
     }
 ]))
 
 app.listen(port, () => {
-    console.log('Example app listening on port ${port}')
+    console.log(`Example app listening on port ${port}`)
 })
