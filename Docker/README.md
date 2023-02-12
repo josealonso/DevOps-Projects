@@ -30,6 +30,16 @@ Detiene todos los contenedores
  docker-compose down
 ```
 
+docker run --name website -d -p 8080:80 nginx
+docker stop website; docker rm website
+Change nginx home page ----> docker run --name website -v /home/jr-web3/DevOpsProjects/Docker/website:/usr/share/nginx/html:ro -d -p 8080:80 nginx
+Getting inside the running container ---> docker exec -it website bash
+Volumes. Sharing data between containers ---> docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
+
+docker inspect <container_name>
+docker logs <container_name>
+docker exec -it <container_name> /bin/sh
+
 
 ### Comandos de Linux
 
@@ -62,10 +72,4 @@ Detiene todos los contenedores
 - tail -f, head
 - ssh
 - cat /proc/loadavg
-
-
-
-
-
-
 
